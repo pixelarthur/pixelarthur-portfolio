@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Pixel Arthur — Portfolio under construction." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Pixel Arthur — Pixel Art & Game Development. Portfolio under construction.">
   <title>Pixel Arthur — Under Construction</title>
 
   <style>
@@ -12,6 +14,7 @@
       src: url('./BLACH___.TTF') format('truetype');
       font-weight: normal;
       font-style: normal;
+      font-display: swap;
     }
 
     :root {
@@ -27,16 +30,11 @@
       box-sizing: border-box;
     }
 
-    html,
     body {
       margin: 0;
-      padding: 0;
-      min-height: 100%;
+      min-height: 100vh;
       background: var(--bg);
       color: var(--text);
-    }
-
-    body {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -50,52 +48,50 @@
       background: var(--panel);
       border: 2px solid var(--border);
       border-radius: 18px;
-      padding: 40px 24px 28px;
+      padding: 36px 24px 28px;
       text-align: center;
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4);
     }
 
-    h1,
-    h2 {
-      font-family: 'Blach', Arial, sans-serif;
-      margin: 0;
-      line-height: 1;
-      text-transform: uppercase;
+    /* Logo original: 512 x 256 */
+    .logo {
+      display: block;
+      width: 512px;
+      height: 256px;
+      max-width: 100%;
+      object-fit: contain;
+      margin: 0 auto 12px;
+      image-rendering: pixelated;
     }
 
     h1 {
-      font-size: clamp(2.5rem, 7vw, 4.6rem);
-      color: var(--text);
-      letter-spacing: 0.04em;
-      margin-bottom: 12px;
+      margin: 0;
     }
 
     h2 {
-      font-size: clamp(1.1rem, 3.2vw, 1.8rem);
+      font-family: 'Blach', Arial, sans-serif;
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: normal;
+      line-height: 1.2;
+      letter-spacing: 0;
+      text-transform: none;
       color: var(--accent);
-      letter-spacing: 0.12em;
-      margin-bottom: 28px;
+      margin: 0 0 24px;
     }
 
-    .monster-wrap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 26px;
-    }
-
-    .monster-wrap img {
-      width: 256px;   /* 64 x 4 */
-      height: 256px;  /* 64 x 4 */
+    /* Monstruo original: 64 x 64 */
+    .monster {
       display: block;
+      width: 256px;
+      height: 256px;
+      margin: 0 auto 26px;
       image-rendering: pixelated;
-      image-rendering: crisp-edges;
     }
 
     .contact {
       margin: 0 0 28px;
       font-size: 1.05rem;
       color: var(--muted);
+      overflow-wrap: anywhere;
     }
 
     .contact a {
@@ -121,30 +117,57 @@
       margin: 0 0 8px;
     }
 
-    footer p:last-child {
-      margin-bottom: 0;
+    /* Adaptación para móviles */
+    @media (max-width: 640px) {
+      .panel {
+        padding: 24px 16px;
+      }
+
+      .logo {
+        width: 256px;
+        height: 128px;
+      }
+
+      .monster {
+        width: 192px;
+        height: 192px;
+      }
     }
   </style>
 </head>
+
 <body>
   <main class="panel">
-    <h1>Pixel Arthur</h1>
+
+    <h1>
+      <img
+        class="logo"
+        src="./pixel_arthur_logo_2.png"
+        alt="Pixel Arthur">
+    </h1>
+
     <h2>Under Construction</h2>
 
-    <div class="monster-wrap">
-      <img src="./monster.png" alt="Construction monster mascot" />
-    </div>
+    <img
+      class="monster"
+      src="./monster.png"
+      alt="Construction monster mascot">
 
     <p class="contact">
       Contact:
-      <a href="mailto:contact@pixelarthur.art">contact@pixelarthur.art</a>
+      <a href="mailto:contact@pixelarthur.art">
+        contact@pixelarthur.art
+      </a>
     </p>
 
     <footer>
       <p>© 2026 Pixel Arthur. All rights reserved.</p>
-      <p>All artwork, characters and visual material on this site are property of Pixel Arthur unless otherwise stated.</p>
-      <p>This website is currently under construction.</p>
+      <p>
+        All artwork, characters and visual material on this
+        site are property of Pixel Arthur unless otherwise stated.
+      </p>
     </footer>
+
   </main>
 </body>
 </html>
