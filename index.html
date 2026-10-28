@@ -9,6 +9,8 @@
   <title>Pixel Arthur — Under Construction</title>
 
   <style>
+    /* FUENTE PERSONALIZADA */
+
     @font-face {
       font-family: 'Blach';
       src: url('./BLACH___.TTF') format('truetype');
@@ -16,6 +18,8 @@
       font-style: normal;
       font-display: swap;
     }
+
+    /* COLORES */
 
     :root {
       --bg: #000000;
@@ -29,6 +33,22 @@
     * {
       box-sizing: border-box;
     }
+
+    /* CURSOR PERSONALIZADO - 48x48 */
+    /* Punto activo: X 8, Y 5 */
+
+    html,
+    body,
+    body * {
+      cursor: url('./spr_cursor.png') 8 5, auto;
+    }
+
+    a,
+    a:hover {
+      cursor: url('./spr_cursor.png') 8 5, pointer;
+    }
+
+    /* FONDO GENERAL */
 
     html {
       min-height: 100%;
@@ -56,6 +76,8 @@
       background-size: 448px 448px;
     }
 
+    /* RECUADRO CENTRAL */
+
     .panel {
       width: 100%;
       max-width: 760px;
@@ -69,11 +91,12 @@
       text-align: center;
     }
 
+    /* LOGO PIXEL ARTHUR */
+
     h1 {
       margin: 0;
     }
 
-    /* Logo original: 512 x 256 */
     .logo {
       display: block;
       width: 512px;
@@ -82,6 +105,8 @@
       margin: 0 auto 12px;
       image-rendering: pixelated;
     }
+
+    /* UNDER CONSTRUCTION */
 
     h2 {
       font-family: 'Blach', Arial, sans-serif;
@@ -94,7 +119,8 @@
       margin: 0 0 24px;
     }
 
-    /* Monstruo original: 64 x 64 */
+    /* MONSTRUO PIXEL ART */
+
     .monster {
       display: block;
       width: 128px;
@@ -102,6 +128,8 @@
       margin: 0 auto 26px;
       image-rendering: pixelated;
     }
+
+    /* CONTACTO */
 
     .contact {
       margin: 0 0 28px;
@@ -121,6 +149,8 @@
       text-decoration: underline;
     }
 
+    /* PIE LEGAL */
+
     footer {
       border-top: 1px solid var(--border);
       padding-top: 18px;
@@ -133,7 +163,8 @@
       margin: 0 0 8px;
     }
 
-    /* Franja de cuadros inferior */
+    /* FRANJA AJEDREZADA INFERIOR */
+
     .checker-strip {
       width: calc(100% + 48px);
       height: 32px;
@@ -147,8 +178,10 @@
       image-rendering: pixelated;
     }
 
-    /* Adaptación para móviles */
+    /* ADAPTACIÓN PARA MÓVILES */
+
     @media (max-width: 640px) {
+
       .panel {
         padding: 24px 16px;
       }
@@ -162,11 +195,15 @@
         height: 128px;
       }
     }
+
   </style>
 </head>
 
 <body>
+
   <main class="panel">
+
+    <!-- LOGO -->
 
     <h1>
       <img
@@ -175,12 +212,18 @@
         alt="Pixel Arthur">
     </h1>
 
+    <!-- CONSTRUCCIÓN -->
+
     <h2>Under Construction</h2>
+
+    <!-- MONSTRUO -->
 
     <img
       class="monster"
       src="./monster.png"
       alt="Construction monster mascot">
+
+    <!-- CONTACTO -->
 
     <p class="contact">
       Contact:
@@ -188,6 +231,8 @@
         contact@pixelarthur.art
       </a>
     </p>
+
+    <!-- COPYRIGHT -->
 
     <footer>
       <p>© 2026 Pixel Arthur. All rights reserved.</p>
@@ -199,6 +244,9 @@
 
   </main>
 
+  <!-- FRANJA INFERIOR -->
+
   <div class="checker-strip" aria-hidden="true"></div>
+
 </body>
 </html>
